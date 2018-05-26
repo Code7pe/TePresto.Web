@@ -21,52 +21,59 @@
   <title>Te presto</title>
 
   <body ng-controller="prestamistaController" style="background-color:#63605B">
-    <header class="container">
+    <header class="">
       <nav class="navbar navbar-expand-lg navbar-light bg-white">
-        <a class="navbar-brand col-6 col-sm-4 col-md-3 col-lg-2" href="#">
-          <img src="assets/images/Logo.png" alt="Logo te presto" class="img-fluid">
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav text-center">
-            <li class="nav-item active">
-              <a class="nav-link" href="#">Inicio
-                <span class="sr-only">(current)</span>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Prestamista</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Cliente</a>
-            </li>
-            <li class="nav-item">
+        <div class="container">
+          <a class="navbar-brand col-6 col-sm-4 col-md-3 col-lg-2" href="#">
+            <img src="assets/images/Logo.png" alt="Logo te presto" class="img-fluid">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+
+            <!--
+            <ul class="navbar-nav text-center">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Inicio
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Prestamista</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Cliente</a>
+              </li>
+              <li class="nav-item">
                 <a class="nav-link border-user rounded-circle" href="#"><i class="fas fa-user"></i></a>
               </li>
-          </ul>
+            </ul>
+            -->
+
+          </div>
         </div>
       </nav>
     </header>
-  
+
     <div class="container">
 
       <div class="row">
-      <h1> Hola Jonathan, Bienvenido a Te presto!</h1>
+      <h1 style="color:white;margin-top: 30px;margin-bottom: 30px;"> Hola Jonathan, Bienvenido a Te presto!</h1>
       </div>
 
+      <!--
       <div class="row">
           <div class="input-group">
               <input type="text" class="form-control" placeholder="Busqueda" aria-describedby="basic-addon2">
               <span class="ion-arrow-down-a" id="basic-addon2"></span>
             </div>
       </div>
-      
-    
+      -->
+
         <div class="row color-white">
-          <table class="table" style="margin:3vw; width:94vw;">
+          <table class="table" style="font-size: 12px;">
               <thead style="background-color:#E27B03">
                 <tr>
                   <th scope="col">Cliente</th>
@@ -80,11 +87,12 @@
                   <th scope="col">Actual</th>
                   <th scope="col">Previo</th>
                   <th scope="col">12m</th>
+                  <th scope="col"></th>
                 </tr>
               </thead>
               <tbody ng-repeat="prestamista in listaPrestamista">
                 <tr>
-                  <th scope="row">{{prestamista.cliente}}</th>
+                  <td>{{prestamista.cliente}}</th>
                   <td>{{prestamista.TipoPrestamo}}</td>
                   <td>{{prestamista.Monto}}</td>
                   <td>{{prestamista.descripcionPrestamo}}</td>
@@ -92,18 +100,19 @@
                   <td>{{prestamista.CoutaSugerida}}</td>
                   <td>{{prestamista.FechaCreacion}}</td>
                   <td>{{prestamista.DeudaTotal}}</td>
-                  <td><a href="ver-prestamista.html">Ver</a></td>
-                  <td>Verde</td>
-                  <td>Verde</td>
+                  <td><img ng-src="public/images/{{prestamista.Actual}}.jpeg" /></td>
+                  <td><img ng-src="public/images/{{prestamista.Previo}}.jpeg" /></td>
+                  <td><img ng-src="public/images/{{prestamista.Anio}}.jpeg" /></td>
+                  <td><a class="btn btn-info" href="ver-prestamista.html">Ver</a></td>
                 </tr>
               </tbody>
             </table>
 
         </div>
-         
-       
+
+
     </div>
-  
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
@@ -117,7 +126,7 @@
       crossorigin="anonymous"></script>
 
       <script src="public/js/prestamistaApp.js"></script>
-  
+
   </body>
- 
+
 </html>
