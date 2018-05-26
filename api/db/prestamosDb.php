@@ -22,4 +22,29 @@ class TeprestoDb extends BaseDb
         $monto, '$descripPago', $coutaSugerida);";
         return $this->querySelect($sp);
     }
+
+    public function consultaPropuesta($clienteid) {
+
+        $sp = "CALL SP_SEL_PROPUESTA($clienteid);";
+        return $this->querySelect($sp);
+    }
+
+
+    public function consultaPrestamo($clienteid) {
+
+        $sp = "CALL SP_SEL_PRESTAMO($clienteid);";
+        return $this->querySelect($sp);
+    }
+    
+
+
+    public function consultaPropuesta2 ($clienteid) {
+        $sql = "SELECT i.nombre + i.apellido as inversionista ,p.monto,po.cuotas,po.totalInteres,po.totalPagar,po.coutaMensual  from Propuesta po inner join Invesionista i
+                on po.inversionstaid=i.inversionstaid inner join Prestamo p 
+                on p.inversionstaid = p.inversionstaid where clienteid='$clienteid'";
+        return $this->query($sql);
+    }
+
+
+
 }
