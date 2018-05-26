@@ -1,119 +1,182 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="clienteApp">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
 
-    <title>Cliente</title>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
 
-    <!-- Bootstrap core CSS -->
-    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Cliente</title>
 
-    <!-- Custom styles for this template -->
-    <link href="http://v4-alpha.getbootstrap.com/examples/blog/blog.css" rel="stylesheet">
+  <!--Icons-->
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/css/toastr.css" rel="stylesheet"/>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.0.1/js/toastr.js"></script>
-  </head>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 
-  <body ng-controller="clienteController">
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style_home.css">
 
-    <div class="blog-masthead">
-      <div class="container">
-        <nav class="nav blog-nav">
-          <a class="nav-link" href="#">Inicio</a>
-          <a class="nav-link" href="#">Préstamos</a>
-          <a class="nav-link active" href="#">Clientes</a>
-        </nav>
+  <!-- <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico"> -->
+  <title>Te presto</title>
+
+</head>
+
+<body ng-controller="clienteController">
+  <!-- ==============HEADER============== -->
+
+  <header class="container">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+      <a class="navbar-brand col-6 col-sm-4 col-md-3 col-lg-2" href="#">
+        <img src="assets/images/Logo.png" alt="Logo te presto" class="img-fluid">
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav text-center">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Inicio
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="prestamista.html">Prestamista</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="cliente.html">Cliente</a>
+            <span class="sr-only">(current)</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link border-user rounded-circle" href="#">
+              <i class="fas fa-user"></i>
+            </a>
+          </li>
+        </ul>
       </div>
+    </nav>
+  </header>
+
+  <div class="blog-header">
+    <div class="container text-center">
+      <h1 class="blog-title md text-center" style="font-size:2.5rem">Cuéntanos sobre el préstamo que necesitas</h1>
+      <p class="lead blog-description">Los inversionistas leerán esta información para decidir apoyar tu causa</p>
     </div>
+  </div>
 
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title md"style="font-size:2.5rem">Cuéntanos sobre el préstamo que necesitas</h1>
-        <p class="lead blog-description">Los inversionistas leerán esta información para decidir apoyar tu causa</p>
-      </div>
-    </div>
+  <div class="container">
 
-    <div class="container">
+    <div class="row justify-content-center">
 
-      <div class="row">
+      <div class="col-8 blog-main">
 
-        <div class="col-sm-8 blog-main">
-
-          <div class="blog-post">
-            <h2 class="blog-post-title" style="font-size:1rem">¿Para qué necesitas el préstamo?</h2>
-            <br>
+        <div class="blog-post">
+          <h2 class="blog-post-title" style="font-size:1rem">1.- ¿Para qué necesitas el préstamo?</h2>
+          <div class="py-3">
             <select class="form-control-sm" ng-model="tipoPrestamo">
-              <option value="1">Personal</option>
+              <option value="1" selected="selected">Personal</option>
               <option value="2">Negocio</option>
             </select>
-          <br></br>
-            <textarea name="name" rows="8" cols="70" ng-model="descripcion"></textarea>
             <br></br>
-            <h2 class="blog-post-title" style="font-size:1rem">¿Cuánto necesitas?</h2>
-            <br>
-            <select class="form-control-sm" ng-model="tipoMoneda">
-              <option value="1">Soles - S/.</option>
-              <option value="2">USD - $</option>
-            </select>
-            <input type="text" ng-model="montoPrestado"></input>
-            <br></br>
-            <h2 class="blog-post-title" style="font-size:1rem">¿Cómo pagarás el préstamo?</h2>
-            <br>
-            <textarea name="name" rows="8" cols="70" ng-model="descripcionFormaPago"></textarea>
-            <br></br>
-            <h2 class="blog-post-title" style="font-size:1rem">¿Cuánto puedes pagas mensualmente?</h2>
-            <br>
-            <input type="text" ng-model="pagoMensual">
-            <br></br>
-            <button type="submit" class="btn btn-success" ng-click="registrarUsuario(usuario)">Grabar</button>
-          </div><!-- /.blog-post -->
-
-
-
-
-
-          <div class="blog-post">
-
+            <div class="row justify-content-center">
+              <textarea name="name" rows="8" cols="70" ng-model="descripcion"></textarea>
+            </div>
           </div>
+          <div class="py-3">
+            <h2 class="blog-post-title" style="font-size:1rem">2.- ¿Cuánto necesitas?</h2>
+            <br>
+            <div class="d-flex justify-content-center">
+              <div class="col-md-8">
+                <div class="d-flex justify-content-between">
+                  <select class="form-control-sm" ng-model="tipoMoneda">
+                    <option value="1">Soles - S/.</option>
+                    <option value="2">USD - $</option>
+                  </select>
+                  <input type="text" ng-model="montoPrestado"></input>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="py-3">
+            <h2 class="blog-post-title" style="font-size:1rem">3.- ¿Cómo pagarás el préstamo?</h2>
+            <br>
+            <div class="d-flex justify-content-center">
+            <textarea name="name" rows="8" cols="70" ng-model="descripcionFormaPago"></textarea>
+          </div>
+            <br></br>
+            <h2 class="blog-post-title" style="font-size:1rem">4.- ¿Cuánto puedes pagas mensualmente?</h2>
+            <br>
+            <div class="d-flex justify-content-center">
+              <input type="text" ng-model="pagoMensual">
+            </div>
+            <br></br>
+            <div class="d-flex justify-content-end">
+              <button type="submit" class="btn btn-success" ng-click="registrarUsuario(usuario)">Grabar</button>
+            </div>
+          </div>
+        </div>
+        <!-- /.blog-post -->
 
-        </div><!-- /.blog-main -->
+        <div class="blog-post">
 
-      </div><!-- /.row -->
+        </div>
 
-    </div><!-- /.container -->
+      </div>
+      <!-- /.blog-main -->
 
-    <footer class="blog-footer">
-      <p>Elaborado por Code7</p>
-      <p>
-        copyright 2018
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
+
+  <!-- ==============FOOTER============== -->
+  <footer class="bg-orange py-3">
+    <div class="text-center text-white">
+      <div class="icons text-white p-3">
+        <a href="linkedin" class="border border-white text-white p-2 m-1 rounded-circle">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="email" class="border border-white text-white p-2 m-1 rounded-circle">
+          <i class="far fa-envelope"></i>
+        </a>
+      </div>
+      <p class="m-0">© 2018 - Todos los derechos reservados.
       </p>
-    </footer>
+    </div>
+    <div class="col-2 bg-dark questions fixed-bottom-d row px-2">
+      <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+        <a href="#">
+          <i class="fab fa-whatsapp fa-2x"></i>
+        </a>
+      </div>
+      <div class="text-white col-9 p-0 text-center">
+        <p class="m-0">Dudas y consultas</p>
+        <p class="m-0 font-weight-bold">936584014</p>
+        <p class="m-0">LUN A VIER 9:00 a 18:00</p>
+      </div>
+    </div>
+  </footer>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
-     <!--JS-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-      crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-      crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-      crossorigin="anonymous"></script>
-<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+  <!--JS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
 
-    <script src="public/js/clienteApp.js"></script>
-  </body>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+    crossorigin="anonymous"></script>
+
+
+  <script src="public/js/clienteApp.js"></script>
+</body>
+
 </html>
