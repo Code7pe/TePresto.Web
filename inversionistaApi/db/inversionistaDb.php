@@ -11,7 +11,12 @@ require_once('inv_config/baseDb.php');
 class InversionistaDb extends BaseDb
 {
     public function listarPrestamosAbiertos() {
-        $sp = "CALL INVSP_ListarPrestamosAbiertos();";
+        $sp = "CALL INVSP_GetPrestamosAbiertos();";
+        return $this->querySelect($sp);
+    }
+
+    public function getPrestamoById($id) {
+        $sp = "CALL INVSP_GetPrestamoById($id);";
         return $this->querySelect($sp);
     }
 

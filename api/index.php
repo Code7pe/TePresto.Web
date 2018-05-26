@@ -14,18 +14,6 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
-$app->options('/{routes:.+}', function ($request, $response, $args) {
-    return $response;
-});
-
-$app->add(function ($req, $res, $next) {
-    $response = $next($req, $res);
-    return $response
-        ->withHeader('Access-Control-Allow-Origin', '*')
-        ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-});
-
 // BEGIN::Registrar usuarios
 
 $app->post('/registrarCliente', function (Request $req,  Response $res, $args = []) {
@@ -61,6 +49,59 @@ $app->post('/registrarPrestamo', function (Request $req, Response $res, $args = 
 
     echo json_encode($data);
 });
+
+
+
+///////////////////////PROPUESTA//
+$app->get('/prueba', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    echo "renzo";
+    
+
+});
+
+
+$app->post('/consultaPropuesta', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    $allPostPutVars = $req->getParsedBody();
+    $clienteid = $allPostPutVars['clienteid'];
+    
+
+    $db = new TeprestoDb();
+    $data = $db->consultaPropuesta($clienteid);
+
+    echo json_encode($data);
+});
+
+$app->post('/consultaPrestamo', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    $allPostPutVars = $req->getParsedBody();
+    $clienteid = $allPostPutVars['clienteid'];
+    
+
+    $db = new TeprestoDb();
+    $data = $db->consultaPrestamo($clienteid);
+
+    echo json_encode($data);
+});
+
+
+
+
+
+
+$app->post('/consultaPropuesta2/:clienteid/', function($clienteid) {
+    $db = new TeprestoDb();
+    $data = $db->consultaPropuesta2($clienteid);
+
+    echo json_encode($data);
+});
+
+
+
 
 
 
