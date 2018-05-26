@@ -8,17 +8,17 @@
     });
 
 	app.controller('clienteController',function($scope, $http, SERVER){
-/*
-    $scope.mostrarDetalle = false;
+
     $scope.tipoPrestamo = "";
     $scope.descripcion = "";
     $scope.tipoMoneda = "";
+    $scope.montoPrestado = "";
     $scope.pagoMensual = "";
     $scope.descripcionFormaPago = "";
     $scope.pagoMensual = "";
-*/
-		$scope.registrarUsuario = function($scope, $http, $window, $sce, SERVER){
 
+		$scope.registrarUsuario = function($scope, $http, $window, $sce, SERVER){
+      $scope.montoPrestado;
       $http.post(SERVER.url + '/api/registrarPrestamo'
        + "/" + 1 + "/"+$scope.tipoPrestamo+"/"
        +$scope.descripcion
@@ -28,14 +28,6 @@
        +"/"+$scope.pagoMensual)
                       .then(function (response) {
                           console.log(response);
-                          //
-                          // $http.post(SERVER.url + '/api/listaDetPacientes/' + SERVER.usuarioId)
-                          //     .then(function (response) {
-                          //         console.log(response);
-                          //         $scope.casos = response.data;
-                          //         $scope.mostrarHistoria = true;
-                          //     });
-
                       });
 
 		}
