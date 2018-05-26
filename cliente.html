@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="clienteApp">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -21,7 +21,7 @@
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
   </head>
 
-  <body>
+  <body ng-controller="clienteController">
 
     <div class="blog-masthead">
       <div class="container">
@@ -49,32 +49,28 @@
           <div class="blog-post">
             <h2 class="blog-post-title" style="font-size:1rem">¿Para qué necesitas el préstamo?</h2>
             <br>
-            <select class="form-control-sm">
-              <option>Personal</option>
-              <option>Empresa</option>
+            <select class="form-control-sm" ng-model="tipoPrestamo">
+              <option value="P">Personal</option>
+              <option value="N">Negocio</option>
             </select>
           <br></br>
-            <textarea name="name" rows="8" cols="70"></textarea>
+            <textarea name="name" rows="8" cols="70" ng-model="descripcion"></textarea>
             <br></br>
             <h2 class="blog-post-title" style="font-size:1rem">¿Cuánto necesitas?</h2>
             <br>
-            <select class="form-control-sm">
-              <option>Soles - S/.</option>
-              <option>USD - $</option>
+            <select class="form-control-sm" ng-model="tipoMoneda">
+              <option value="1">Soles - S/.</option>
+              <option value="2">USD - $</option>
             </select>
-            <input type="text" name="" value="">
+            <input type="text" ng-model="montoPrestado"></input>
             <br></br>
             <h2 class="blog-post-title" style="font-size:1rem">¿Cómo pagarás el préstamo?</h2>
             <br>
-            <textarea name="name" rows="8" cols="70"></textarea>
+            <textarea name="name" rows="8" cols="70" ng-model="descripcionFormaPago"></textarea>
             <br></br>
-            <h2 class="blog-post-title" style="font-size:1rem">¿Cuánto puedes pagas mensualmente?</h2>
+            <h2 class="blog-post-title" style="font-size:1rem" ng-model="">¿Cuánto puedes pagas mensualmente?</h2>
             <br>
-            <input type="text" name="" value="">
-            <br></br>
-            <h2 class="blog-post-title" style="font-size:1rem">¿Dónde vives actualmente?</h2>
-            <br>
-            <input type="text" name="" value="">
+            <input type="text" ng-model="pagoMensual">
             <br></br>
             <button type="submit" class="btn btn-success" ng-click="registrarUsuario(usuario)">Grabar</button>
           </div><!-- /.blog-post -->
@@ -124,7 +120,10 @@
     <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.8/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.15/angular-filter.min.js"></script>
+    <script src="public/js/clienteApp.js"></script>
   </body>
 </html>
