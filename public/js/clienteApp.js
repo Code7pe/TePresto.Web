@@ -33,7 +33,12 @@ var data= {"clienteid":1,
 
       $http.post(SERVER.url + '/api/registrarPrestamo', dataJson)
                       .then(function (response) {
-                          console.log(response);
+                        if(response.status == 200){
+                          toastr.success('!Registro exitoso!', 'Éxito');
+                        }
+                        else{
+                          toastr.error('!Error al registrar¡', 'Oops..');
+                          }
                       });
 
 		}
