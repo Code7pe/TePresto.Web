@@ -64,41 +64,41 @@
             </div>
       </div>
       
-
-        <div class="row color-yellow table-header" style="font-size: 15px;">
-          <div class="col">Cliente</div>
-          <div class="col">Tipo Prestamo</div>
-          <div class="col">Monto Solicitado</div>
-          <div class="col">Motivo</div>
-          <div class="col">Capacidad Mensual</div>
-          <div class="col">Propuestas Enviadas</div>
-          <div class="col">Fecha de Creacion</div>
-          <div class="col">Ver</div>
-          <div class="col">Deuda Total</div>
-          <div class="col">Actual</div>
-          <div class="col">Previo</div>
-          <div class="col">12m</div>
-        </div>
     
         <div class="row color-white">
-          <div ng-repeat="prestamista in listaPrestamista" style="display: flex">
-            <!-- {{prestamista}} -->
-            <div class="col"> {{prestamista.cliente}}</div>
-            <div class="col"> {{prestamista.TipoPrestamo}}</div>
-            <div class="col">{{prestamista.Monto}}</div>
-            <div class="col">{{prestamista.descripcionPrestamo}}</div>
-            <div class="col">{{prestamista.CoutaSugerida}}</div>
-            <div class="col">Propuestas Enviadas</div>
-            <div class="col">{{prestamista.FechaCreacion}}</div>
-            <div class="col">
-              <span ng-click="verDetallePrestamista(prestamista.prestamoId);">ver</span>
-              <a href="ver-prestamista.html">Ver</a>
-            </div>
-            <div class="col">{{prestamista.DeudaTotal}}</div>
-            <div class="col ">{{prestamista.Actual}}</div>
-            <div class="col">{{prestamista.Previo}}</div>
-            <div class="col">{{prestamista.Anio}}</div>
-          </div>
+          <table class="table" style="margin:3vw; width:94vw;">
+              <thead style="background-color:#E27B03">
+                <tr>
+                  <th scope="col">Cliente</th>
+                  <th scope="col">Tipo de Prestamo</th>
+                  <th scope="col">Monto solicitado</th>
+                  <th scope="col">Motivo</th>
+                  <th scope="col">Capacidad mensual</th>
+                  <th scope="col">Propuestas enviadas</th>
+                  <th scope="col">Fecha de creacion</th>
+                  <th scope="col">Deuda total</th>
+                  <th scope="col">Actual</th>
+                  <th scope="col">Previo</th>
+                  <th scope="col">12m</th>
+                </tr>
+              </thead>
+              <tbody ng-repeat="prestamista in listaPrestamista">
+                <tr>
+                  <th scope="row">{{prestamista.cliente}}</th>
+                  <td>{{prestamista.TipoPrestamo}}</td>
+                  <td>{{prestamista.Monto}}</td>
+                  <td>{{prestamista.descripcionPrestamo}}</td>
+                  <td>{{prestamista.CoutaSugerida}}</td>
+                  <td>{{prestamista.CoutaSugerida}}</td>
+                  <td>{{prestamista.FechaCreacion}}</td>
+                  <td>{{prestamista.DeudaTotal}}</td>
+                  <td><a href="ver-prestamista.html">Ver</a></td>
+                  <td>Verde</td>
+                  <td>Verde</td>
+                </tr>
+              </tbody>
+            </table>
+
         </div>
          
        
