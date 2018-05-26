@@ -20,4 +20,9 @@ class InversionistaDb extends BaseDb
         return $this->querySelect($sp);
     }
 
+    public function InsertPropuesta($prestamoId,$inversionistaId, $cuotas, $totalInteres, $totalPagar, $cuotaMensual) {
+        $sp = "CALL INVSP_InsertPropuesta($prestamoId,$inversionistaId, $cuotas, $totalInteres, $totalPagar, $cuotaMensual);";
+        return $this->querySelect($sp);
+    }
+
 }

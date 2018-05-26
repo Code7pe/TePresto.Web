@@ -10,7 +10,8 @@
 
   <!--Icons-->
 
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+    crossorigin="anonymous">
 
   <!-- CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
@@ -44,38 +45,53 @@
               <a class="nav-link" href="#">Cliente</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link border-user rounded-circle" href="#"><i class="fas fa-user"></i></a>
-              </li>
+              <a class="nav-link border-user rounded-circle" href="#">
+                <i class="fas fa-user"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
     </header>
+    <!--===================== PORTADA ==================-->
+    <div class="container-fluid">
+    <div class="row">
+        <div  class="bg-orange-d col-md-5 text-center text-white font-weight-bold d-flex justify-content-center align-items-center">
+          <div class="col-md-11">
+            <h3>Brindamos préstamos entre peruanos
+              <img src="assets/icons/bandera-peru.png" alt="">,
+              <br> más rápido, más seguros y 100% digitales</h3>
+          </div>
+        </div>
+        <div class="col-md-7 p-0">
+          <img class="img-fluid" src="public/images/dinheiro-online.jpg" alt="First slide">
+        </div>
+      </div>
+    </div>
     <!-- Carousel
     ================================================== -->
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- <div id="myCarousel" class="carousel slide" data-ride="carousel"> -->
       <!-- Indicators -->
-      <ol class="carousel-indicators">
+      <!-- <ol class="carousel-indicators">
         <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
         <li data-target="#myCarousel" data-slide-to="1" class=""></li>
         <li data-target="#myCarousel" data-slide-to="2" class=""></li>
       </ol>
       <div class="carousel-inner" role="listbox">
-        <div class="carousel-item active">
-          <!-- <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide"> -->
-          <img class="first-slide" src="public/images/dinheiro-online.jpg" alt="First slide">
+        <div class="carousel-item active"> -->
+          
 
-          <div class="container">
+          <!-- <div class="container">
             <div class="carousel-caption text-left">
-              <h1>Préstamos seguros</h1>
-              <p>Brindamos préstamos entre peruanos, más rápido, más seguros y 100% digitales</p>
+              
               <p>
                 <a class="btn btn-lg btn-primary" href="#" role="button">Acceder</a>
               </p>
             </div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div>
         <div class="carousel-item">
-          <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+          <img class="second-slide" src="public/images/dinheiro-online.jpg" alt="Second slide">
           <div class="container">
             <div class="carousel-caption">
               <h1>Another example headline.</h1>
@@ -109,116 +125,95 @@
         <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
-    <!-- /.carousel -->
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-      <h2 class="text-center">Nuestros Servicios</h2>
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-12 col-md-6">
-            <h5>¿Deseo invertir?</h5>
-          <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image"
-            width="140" height="140"> -->
-            <i class="far fa-handshake fa-2x"></i>
-          <p>Peruanos invirtiendo en peruanos,<br> 
-            préstamos entre peruanos</p>
-            <button type="button" class="btn btn-outline-info">Inversión</button>
+    </div> -->
+    <main>
+      <!-- ============= SERVICE ================ -->
+      <section class="service container-fluid py-4">
+        <h2 class="text-center m-3 color-orange font-weight-bold">Nuestros Servicios</h2>
+        <!-- Three columns of text below the carousel -->
+        <div class="row text-center mt-4">
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <div class="col-10 col-md-8 bg-gray py-3 my-1 rounded">
+              <h5 class="color-orange">¿Deseo invertir?</h5>
+              <i class="far fa-handshake fa-4x"></i>
+              <p>Peruanos invirtiendo en peruanos,
+                <br> préstamos entre peruanos</p>
+              <button type="button" class="btn btn-outline-info">Inversión</button>
+            </div>
+          </div>
+          <div class="col-12 col-md-6 d-flex justify-content-center">
+            <div class="col-10 col-md-8 bg-gray py-3 my-1 rounded">
+              <h5 class="color-orange">¿Necesito dinero?</h5>
+              <img class="img-desktop" src="assets/icons/desktop.png" alt="Generic placeholder image">
+              <p>Busca tu prestamista, elige el que
+                <br> más te conviene.</p>
+              <button type="button" class="btn btn-outline-info">Préstamos</button>
+            </div>
+          </div>
         </div>
-        <!-- /.col-lg-4 -->
-        <div class="col-12 col-md-6">
-            <h5>¿Necesito dinero?</h5>
-          <!-- <img class="img-circle" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Generic placeholder image"
-            width="140" height="140"> -->
-            <p>Busca tu prestamista, elige el que <br>
-                más te conviene.</p>
-            <button type="button" class="btn btn-outline-info">Préstamos</button>
+      </section>
+
+      <!-- ============= NUMBERS ================ -->
+      <section class="numbers bg-dark py-3 container-fluid">
+        <div class="row text-white text-center">
+          <div class="col-12 col-md-6 py-3">
+            <h2 class="font-weight-bold d-inline-block">S/. 1,558,000</h2>
+            <span>Invertido en préstamos</span>
+          </div>
+          <div class="col-12 col-md-6 py-3">
+            <h2 class="font-weight-bold d-inline-block">458</h2>
+            <span>Prestamos realizados</span>
+          </div>
         </div>
-        <!-- /.col-lg-4 -->
-      </div>
-      <!-- /.row -->
-
-
-      <!-- START THE FEATURETTES -->
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">First featurette heading.
-            <span class="text-muted">It'll blow your mind.</span>
-          </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
+        <div class="row text-white text-center">
+          <div class="col-12 col-md-6 py-3">
+            <h2 class="font-weight-bold d-inline-block">240</h2>
+            <p class="d-inline-block">Personas invirtiendo en el
+              <br> trabajo de otras personas</p>
+          </div>
+          <div class="col-12 col-md-6 py-3">
+            <h2 class="font-weight-bold d-inline-block">1,152</h2>
+            <span>Usuarios registrados</span>
+          </div>
         </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MDA0YjlkNGM4IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwMDRiOWQ0YzgiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+"
-            data-holder-rendered="true">
+      </section>
+    </main>
+    <!-- FOOTER -->
+    <footer class="bg-orange py-3">
+      <div class="text-center text-white">
+        <div class="icons text-white p-3">
+          <a href="linkedin" class="border border-white text-white p-2 m-1 rounded-circle">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="email" class="border border-white text-white p-2 m-1 rounded-circle">
+            <i class="far fa-envelope"></i>
+          </a>
         </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">Oh yeah, it's that good.
-            <span class="text-muted">See for yourself.</span>
-          </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MDA0YjliZmI0IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwMDRiOWJmYjQiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+"
-            data-holder-rendered="true">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <div class="row featurette">
-        <div class="col-md-7">
-          <h2 class="featurette-heading">And lastly, this one.
-            <span class="text-muted">Checkmate.</span>
-          </h2>
-          <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo
-            cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
-        </div>
-        <div class="col-md-5">
-          <img class="featurette-image img-fluid center-block" data-src="holder.js/500x500/auto" alt="500x500" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iNTAwIiBoZWlnaHQ9IjUwMCIgdmlld0JveD0iMCAwIDUwMCA1MDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjwhLS0KU291cmNlIFVSTDogaG9sZGVyLmpzLzUwMHg1MDAvYXV0bwpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1MDA0YjlkMjE5IHRleHQgeyBmaWxsOiNBQUFBQUE7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6MjVwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTUwMDRiOWQyMTkiPjxyZWN0IHdpZHRoPSI1MDAiIGhlaWdodD0iNTAwIiBmaWxsPSIjRUVFRUVFIi8+PGc+PHRleHQgeD0iMTg1LjEzMjgxMjUiIHk9IjI2MS4xIj41MDB4NTAwPC90ZXh0PjwvZz48L2c+PC9zdmc+"
-            data-holder-rendered="true">
-        </div>
-      </div>
-
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
-
-      <!-- FOOTER -->
-      <footer>
-        <p class="pull-right">
-          <a href="#">Back to top</a>
+        <p class="m-0">© 2018 - Todos los derechos reservados.
         </p>
-        <p>© 2014 Company, Inc. ·
-          <a href="#">Privacy</a> ·
-          <a href="#">Terms</a>
-        </p>
-      </footer>
+      </div>
+      <div class="col-2 bg-dark questions fixed-bottom-d row px-2">
+        <div class="col-3 p-0 d-flex justify-content-center align-items-center">
+          <a href="#">
+            <i class="fab fa-whatsapp fa-2x"></i>
+          </a>
+        </div>
+        <div class="text-white col-9 p-0 text-center">
+          <p class="m-0">Dudas y consultas</p>
+          <p class="m-0 font-weight-bold">936584014</p>
+          <p class="m-0">LUN A VIER 9:00 a 18:00</p>
+        </div>
+      </div>
+    </footer>
 
-    </div>
-     <!--JS-->
+    <!--JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
       crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
       crossorigin="anonymous"></script>
-  
+
   </body>
- 
+
 </html>

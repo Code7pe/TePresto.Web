@@ -14,6 +14,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
+
 $app->options('/{routes:.+}', function ($request, $response, $args) {
     return $response;
 });
@@ -40,6 +41,23 @@ $app->get('/getPrestamo/{id}', function (Request $req,  Response $res, $args = [
 
     $db = new InversionistaDb();
     $data = $db->getPrestamoById($prestamoId);
+
+    echo json_encode($data);
+});
+
+$app->post('/crearPropuesta', function (Request $req,  Response $res, $args = []) {
+
+
+    $allPostPutVars = $req->getParsedBody();
+    $prestamoId = $allPostPutVars['prestamoId'];
+    $inversionistaId = $allPostPutVars['inversionistaId'];
+    $cuotas = $allPostPutVars['cuotas'];
+    $totalInteres = $allPostPutVars['totalInteres'];
+    $totalPagar = $allPostPutVars['totalPagar'];
+    $cuotaMensual = $allPostPutVars['cuotaMensual'];
+
+    $db = new InversionistaDb();
+    $data = $db->InsertPropuesta($prestamoId,$inversionistaId, $cuotas, $totalInteres, $totalPagar, $cuotaMensual);
 
     echo json_encode($data);
 });

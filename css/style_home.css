@@ -9,10 +9,89 @@
     text-align: center;
 }
 
+.img-desktop {
+    width: 70px;
+}
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .show>.nav-link {
+    color: #E27B03;
+    font-weight: bold;
+}
+
+
+
+/*=============== PORTADA ==============*/
+.bg-orange-d {
+    background: linear-gradient(to right, rgb(105,56,13), #E27B03);
+}
+  
+#info-slide-md {
+    display: none !important; 
+}
+
+/*=============== SERVICE ==============*/
+.bg-gray {
+    background-color: #E0E0E0;
+}
+
+.service {
+    border: 5px solid #E27B03;
+}
+
+.color-orange {
+    color: #E27B03;
+}
+
+.btn-outline-info {
+    color: #E27B03;
+    border-color: #E27B03;
+}
+
+.btn-outline-info:hover {
+    background-color: #E27B03;
+    border-color: white;
+
+}
+
+/*=============== FOOTER ==============*/
+
+.bg-orange {
+    background-color: #E27B03
+}
+
+.questions {
+    border-radius: 0.5rem;
+}
+
+.questions a i {
+    color: #219653;
+}
+
+.questions p {
+    font-size: 0.7rem;
+}
+
+.fixed-bottom-d {
+    position: fixed;
+     bottom: 0;
+     right: 2rem;
+}
 
 @media(min-width: 990px) {
     .navbar-nav {
         position: absolute;
         right: 0;
     }
+
+    .service {
+        border: 10px solid #E27B03;
+    }
+
+    #info-slide-md {
+        display: block !important;
+    }
+}
+
+@media(max-width: 768px) {
+    
 }
