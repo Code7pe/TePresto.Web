@@ -26,12 +26,20 @@ $app->add(function ($req, $res, $next) {
         ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
 });
 
-// BEGIN::Registrar usuarios
-
 $app->get('/listarPrestamosAbiertos', function (Request $req,  Response $res, $args = []) {
 
     $db = new InversionistaDb();
     $data = $db->listarPrestamosAbiertos();
+
+    echo json_encode($data);
+});
+
+$app->get('/getPrestamo/{id}', function (Request $req,  Response $res, $args = []) {
+
+    $prestamoId = $args['id'];
+
+    $db = new InversionistaDb();
+    $data = $db->getPrestamoById($prestamoId);
 
     echo json_encode($data);
 });
