@@ -10,8 +10,8 @@ require_once('inv_config/baseDb.php');
 
 class InversionistaDb extends BaseDb
 {
-    public function listarPrestamos() {
-        $sp = "CALL SP_INS_CLIENTE('$nombre', '$apellido', '$correo', '$clave');";
+    public function listarPrestamosAbiertos() {
+        $sp = "CALL INVSP_ListarPrestamosAbiertos();";
         return $this->querySelect($sp);
     }
 

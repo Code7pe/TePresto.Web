@@ -28,10 +28,10 @@ $app->add(function ($req, $res, $next) {
 
 // BEGIN::Registrar usuarios
 
-$app->get('/listarPrestamos', function (Request $req,  Response $res, $args = []) {
+$app->get('/listarPrestamosAbiertos', function (Request $req,  Response $res, $args = []) {
 
     $db = new InversionistaDb();
-    $data = $db->registrarCliente();
+    $data = $db->listarPrestamosAbiertos();
 
     echo json_encode($data);
 });
