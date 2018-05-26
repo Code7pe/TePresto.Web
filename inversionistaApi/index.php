@@ -45,4 +45,21 @@ $app->get('/getPrestamo/{id}', function (Request $req,  Response $res, $args = [
     echo json_encode($data);
 });
 
+$app->post('/crearPropuesta', function (Request $req,  Response $res, $args = []) {
+
+
+    $allPostPutVars = $req->getParsedBody();
+    $prestamoId = $allPostPutVars['prestamoId'];
+    $inversionistaId = $allPostPutVars['inversionistaId'];
+    $cuotas = $allPostPutVars['cuotas'];
+    $totalInteres = $allPostPutVars['totalInteres'];
+    $totalPagar = $allPostPutVars['totalPagar'];
+    $cuotaMensual = $allPostPutVars['cuotaMensual'];
+
+    $db = new InversionistaDb();
+    $data = $db->InsertPropuesta($prestamoId,$inversionistaId, $cuotas, $totalInteres, $totalPagar, $cuotaMensual);
+
+    echo json_encode($data);
+});
+
 $app->run();
