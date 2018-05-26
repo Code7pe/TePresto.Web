@@ -1,0 +1,34 @@
+.presto-select {
+    display: block;
+    width: 100%;
+    border-top: solid 1px #dce8f2!important;
+    border-left: solid 1px #dce8f2!important;
+    border-right: solid 1px #dce8f2!important;
+    border-bottom: solid 1px #dce8f2!important;
+    background: #fff!important;
+    direction: ltr!important;
+    max-width: 100%!important;
+    color: #143357;
+    font-size: 16px;
+}
+
+.color-yellow{
+    background-color: #F39815 !important;
+}
+
+.color-white{
+    background-color: #fff !important;
+}
+
+.table-header{
+    padding-top: 10px;
+    height: 50px;
+}
+
+.color-gray{
+    background-color: #63605B !important;
+}
+
+.text-color-white{
+    color: #ffffff;
+}
