@@ -64,4 +64,57 @@ $app->post('/registrarPrestamo', function (Request $req, Response $res, $args = 
 
 
 
+///////////////////////PROPUESTA//
+$app->get('/prueba', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    echo "renzo";
+    
+
+});
+
+
+$app->post('/consultaPropuesta', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    $allPostPutVars = $req->getParsedBody();
+    $clienteid = $allPostPutVars['clienteid'];
+    
+
+    $db = new TeprestoDb();
+    $data = $db->consultaPropuesta($clienteid);
+
+    echo json_encode($data);
+});
+
+$app->post('/consultaPrestamo', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    $allPostPutVars = $req->getParsedBody();
+    $clienteid = $allPostPutVars['clienteid'];
+    
+
+    $db = new TeprestoDb();
+    $data = $db->consultaPrestamo($clienteid);
+
+    echo json_encode($data);
+});
+
+
+
+
+
+
+$app->post('/consultaPropuesta2/:clienteid/', function($clienteid) {
+    $db = new TeprestoDb();
+    $data = $db->consultaPropuesta2($clienteid);
+
+    echo json_encode($data);
+});
+
+
+
+
+
+
 $app->run();
