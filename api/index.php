@@ -43,5 +43,25 @@ $app->post('/registrarCliente', function (Request $req,  Response $res, $args = 
     echo json_encode($data);
 });
 
+$app->post('/registrarPrestamo', function (Request $req, Response $res, $args = []) {
+
+        //POST or PUT
+    $allPostPutVars = $req->getParsedBody();
+    $clienteid = $allPostPutVars['clienteid'];
+    $tipoPrestamo = $allPostPutVars['tipoPrestamo'];
+    $descripPrestamo = $allPostPutVars['descripPrestamo'];
+    $monedaid = $allPostPutVars['monedaid'];
+    $monto = $allPostPutVars['monto'];
+    $descripPago = $allPostPutVars['descripPago'];
+    $coutaSugerida = $allPostPutVars['coutaSugerida'];
+
+    $db = new TeprestoDb();
+    $data = $db->registrarPrestamo($clienteid, $tipoPrestamo, $descripPrestamo, $monedaid,
+        $monto, $descripPago, $coutaSugerida);
+
+    echo json_encode($data);
+});
+
+
 
 $app->run();

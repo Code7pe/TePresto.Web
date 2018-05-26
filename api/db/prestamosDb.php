@@ -14,4 +14,12 @@ class TeprestoDb extends BaseDb
         $sp = "CALL SP_INS_CLIENTE('$nombre', '$apellido', '$correo', '$clave');";
         return $this->querySelect($sp);
     }
+
+    public function registrarPrestamo($clienteid, $tipoPrestamo, $descripPrestamo, $monedaid,
+                                      $monto, $descripPago, $coutaSugerida) {
+
+        $sp = "CALL SP_INS_PRESTAMO($clienteid, $tipoPrestamo, '$descripPrestamo', $monedaid,
+        $monto, '$descripPago', $coutaSugerida);";
+        return $this->querySelect($sp);
+    }
 }
