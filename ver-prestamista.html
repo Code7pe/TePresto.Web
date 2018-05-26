@@ -1,53 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="prestamistaApp">
 
-<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="https://npmcdn.com/tether@1.2.4/dist/js/tether.min.js"></script>
-    <script src="https://npmcdn.com/bootstrap@4.0.0-alpha.5/dist/js/bootstrap.min.js"></script>       
-    <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>        
-    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.12.4/js/bootstrap-select.min.js"></script>
-</head>
-<body>
+  <!--Icons-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style_prestamista.css">
+
+  <!-- <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico"> -->
+  <title>Te presto</title>
+
+  <body ng-controller="detallePrestamistaController" style="background-color:#fff">
+    <header class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-white">
+        <a class="navbar-brand col-6 col-sm-4 col-md-3 col-lg-2" href="#">
+          <img src="assets/images/Logo.png" alt="Logo te presto" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav text-center">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Inicio
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Prestamista</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Cliente</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link border-user rounded-circle" href="#"><i class="fas fa-user"></i></a>
+              </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  
     <div class="container">
-        <div class="row">
-            <div class="col-xs-2">
+        <div class="row color-gray" >
+            <div class="col-md-2">
                 FOTO
             </div>
-            <div class="col-xs-10">
+            <div class="col-md-10">
                 <div class="row">
-                    <div class="col-xs-12">
+                    <div class="col-md-2">
                         <h1>Harry Philips</h1>
                     </div>
-                    <div class="col-xs-12">
+                    <div class="col-md-10">
                         <h3>Descripcion del Perfil</h3>
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col">
-                Para que necesita el prestamo?
-            </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                <label for="comment"></label>
-                <textarea class="form-control" rows="5" id="comment"></textarea>
-            </div>
-        </div>
-        <div class="form-group">
-                <label>Cuanto necesita</label>
-                <input type="password" class="form-control">
-              </div>
-        </div>
     
-</body>
+        
+    </div>
+  
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
+    <scrip src="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"></scrip>
+     <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+      crossorigin="anonymous"></script>
+
+      <script src="public/js/detallePrestamistaApp.js"></script>
+  
+  </body>
+ 
 </html>

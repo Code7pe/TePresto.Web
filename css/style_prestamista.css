@@ -25,6 +25,11 @@
     height: 50px;
 }
 
+.table-detais {
+    padding-top: 10px;
+    height: 30px;
+}
+
 .color-gray{
     background-color: #63605B !important;
 }

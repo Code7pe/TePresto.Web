@@ -57,44 +57,57 @@
       <h1> Hola Jonathan, Bienvenido a Te presto!</h1>
       </div>
 
-        <div class="row color-yellow table-header" style="font-size: 15px;">
-          <div class="col-xs-1">Cliente</div>
-          <div class="col-xs-1">Tipo Prestamo</div>
-          <div class="col-xs-1">Monto Solicitado</div>
-          <div class="col-xs-1">Motivo</div>
-          <div class="col-xs-1">Capacidad Mensual</div>
-          <div class="col-xs-1">Propuestas Enviadas</div>
-          <div class="col-xs-1">Fecha de Creacion</div>
-          <div class="col-xs-1">Ver</div>
-          <div class="col-xs-1">Deuda Total</div>
-          <div class="col-xs-1">Actual</div>
-          <div class="col-xs-1">Previo</div>
-          <div class="col-xs-1">12m</div>
-        </div>
-        
-    
-          <div ng-repeat="prestamista in listaPrestamista" style="display: flex">
+      <div class="row">
+          <div class="input-group">
+              <input type="text" class="form-control" placeholder="Busqueda" aria-describedby="basic-addon2">
+              <span class="ion-arrow-down-a" id="basic-addon2"></span>
+            </div>
+      </div>
+      
 
-           <!-- {{prestamista}} -->
-              <div class="col-xs-1"> {{prestamista.cliente}}</div>
-              <div class="col-xs-1"> {{prestamista.TipoPrestamo}}</div>
-              <div class="col-xs-1">{{prestamista.Monto}}</div>
-              <div class="col-xs-1">{{prestamista.descripcionPrestamo}}</div>
-              <div class="col-xs-1">{{prestamista.CoutaSugerida}}</div>
-              <div class="col-xs-1">Propuestas Enviadas</div>
-              <div class="col-xs-1">{{prestamista.FechaCreacion}}</div>
-              <div class="col-xs-1"><a href="ver-prestamista.html">Ver</a></div>
-              <div class="col-xs-1">{{prestamista.DeudaTotal}}</div>
-              <div class="col-xs-1">{{prestamista.Actual}}</div>
-              <div class="col-xs-1">{{prestamista.Previo}}</div>
-              <div class="col-xs-1">{{prestamista.Anio}}</div>
+        <div class="row color-yellow table-header" style="font-size: 15px;">
+          <div class="col">Cliente</div>
+          <div class="col">Tipo Prestamo</div>
+          <div class="col">Monto Solicitado</div>
+          <div class="col">Motivo</div>
+          <div class="col">Capacidad Mensual</div>
+          <div class="col">Propuestas Enviadas</div>
+          <div class="col">Fecha de Creacion</div>
+          <div class="col">Ver</div>
+          <div class="col">Deuda Total</div>
+          <div class="col">Actual</div>
+          <div class="col">Previo</div>
+          <div class="col">12m</div>
+        </div>
+    
+        <div class="row color-white">
+          <div ng-repeat="prestamista in listaPrestamista" style="display: flex">
+            <!-- {{prestamista}} -->
+            <div class="col"> {{prestamista.cliente}}</div>
+            <div class="col"> {{prestamista.TipoPrestamo}}</div>
+            <div class="col">{{prestamista.Monto}}</div>
+            <div class="col">{{prestamista.descripcionPrestamo}}</div>
+            <div class="col">{{prestamista.CoutaSugerida}}</div>
+            <div class="col">Propuestas Enviadas</div>
+            <div class="col">{{prestamista.FechaCreacion}}</div>
+            <div class="col">
+              <span ng-click="verDetallePrestamista(prestamista.prestamoId);">ver</span>
+              <a href="ver-prestamista.html">Ver</a>
+            </div>
+            <div class="col">{{prestamista.DeudaTotal}}</div>
+            <div class="col ">{{prestamista.Actual}}</div>
+            <div class="col">{{prestamista.Previo}}</div>
+            <div class="col">{{prestamista.Anio}}</div>
           </div>
+        </div>
+         
        
     </div>
   
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-filter/0.5.17/angular-filter.js"></script>
+    <scrip src="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css"></scrip>
      <!--JS-->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"></script>

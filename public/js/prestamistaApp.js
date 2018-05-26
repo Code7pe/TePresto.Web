@@ -14,16 +14,9 @@
     
           }, function error(response) {
           });
-
-		// $scope.probar = function(){
-		// 	$http.get(SERVER.url + '/api/casos')
-        //     .then(function (response) {
-        //         console.log(response);
-        //         $scope.listaTest = response.data;
-        //     })
-		// }
-
-	});
+    });
+    
+    
 
 
 }());
