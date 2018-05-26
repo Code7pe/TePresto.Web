@@ -14,6 +14,7 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 $app = new \Slim\App(['settings' => ['displayErrorDetails' => true]]);
 
+
 $app->options('/{routes:.+}', function ($request, $response, $args) {
     return $response;
 });
