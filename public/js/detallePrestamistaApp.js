@@ -11,7 +11,7 @@
             method: 'GET',
             url: 'http://sdkpalestra.com/code7/tepresto/inversionistaApi/getPrestamo/' + objectData.prestamoId
         }).then(function (response) {
-            $scope.listaPrestamista = response.data;
+            $scope.listaDetallePrestamista = response.data;
 
         }, function error(response) {
         });

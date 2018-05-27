@@ -1,10 +1,9 @@
 (function () {
 
-    var app = angular.module('prestamistaApp', []);
+    var app = angular.module('prestamistaApp', ['angular.filter']);
 
 
 	app.controller('prestamistaController',function($scope, $http){
-        debugger;
 
         $http({
             method: 'GET',

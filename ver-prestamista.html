@@ -57,16 +57,88 @@
             </div>
             <div class="col-md-10">
                 <div class="row">
-                    <div class="col-md-2">
-                        <h1>Harry Philips</h1>
+                    <div class="col-md-12">
+                        <h4>Harry Philips</h4>
                     </div>
-                    <div class="col-md-10">
-                        <h3>Descripcion del Perfil</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-10" style="font-size: 14px;">
+                        <span>Descripcion del Perfil</span>
                     </div>
                 </div>
             </div>
         </div>
-    
+
+        <div class="row">
+            <div class="col-md-12" style="color: #E27B03">
+               <h4>DATOS</h4> 
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col text-yellow"> Nombre Completo</div>
+                        <div class="col">Harry Philips Moreno</div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-6 text-yellow">Domicilio</div>
+                        <div class="col-md-6">Av. Lima 123</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12"  style="color: #E27B03">
+                <h4>SOLICITUD DE PRESTAMO</h4> 
+                
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12"  style="color: #E27B03">
+                <h4>CODIFICACION DE INFOCORP</h4> 
+               
+            </div>
+
+            <table class="table" style="width:94vw;">
+                    <thead style="background-color:#E27B03">
+                      <tr>
+                        <th scope="col">Documentos</th>
+                        <th scope="col">Ultima actualizacion</th>
+                        <th scope="col">Fecha de Nacimiento</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Deuda total S/.</th>
+                        <th scope="col">Actual</th>
+                        <th scope="col">Previo</th>
+                        <th scope="col">12m</th>
+                      </tr>
+                    </thead>
+                    <tbody ng-repeat="listadetalle in listaDetallePrestamista">
+                      <tr>
+                        <th scope="row"><span style="color:#ec7501;">DNI:</span>{{listadetalle.ifc_dni}}</th>
+                        <td>{{listadetalle.ifc_dni}}</td>
+                        <td>{{listadetalle.fechaRegistro }}</td>
+                        <td>{{listadetalle.ifc_dni}}</td>
+                        <td>{{listadetalle.deudaTotal}}</td>
+                        <td>{{listadetalle.CoutaSugerida}}</td>
+                        <td>{{listadetalle.ifc_dni}}</td>
+                        <td>{{listadetalle.ifc_dni}}</td>
+                      </tr>
+                      <!-- <tr>
+                        <th scope="row"><span style="color:#ec7501;">RUC:</span>10476312851</th>
+                        <td>30/04/2018</td>
+                        <td>10/02/2018</td>
+                        <td>0.000</td>
+                        <td>3,500</td>
+                        <td>0</td>
+                        <td>09/04/2018</td>
+                        <td>S/. 20,000.00</td>
+                      </tr> -->
+                    </tbody>
+                  </table>
+        </div>
         
     </div>
   
